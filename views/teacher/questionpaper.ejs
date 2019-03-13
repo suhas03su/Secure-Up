@@ -1,0 +1,518 @@
+ <!DOCTYPE html>
+<html>
+<% include ../partials/theader %>
+
+		<style type="text/css">
+			.t{
+	text-align: center;
+		}
+</style>
+<div class="container" align="center">
+	<legend align="center">Question Paper</legend>
+		<form class="col-md-6 offset-md-3" action="/teachers/questionpaper" method="POST" onsubmit=" return valuate(this);" >
+			<div class="form-group">
+			<label for="Subject">Subject</label>
+			<input class="form-control t" type="text" name="Subject" placeholder="Subject" required="" autofocus>
+			</div>
+			<div class="form-group">
+			<label for="Semester">Semester</label>
+			<input class="form-control t" type="text" name="Semester" placeholder="Semester" required="" autofocus>
+			</div>
+			<div class="form-group">
+			<label for="SubjectCode">Subject Code</label>
+			<input class="form-control t" type="text" name="SubjectCode" placeholder="Subject Code" required="" autofocus>
+			</div>
+			</div>
+			<div class="container">
+				<header class = "jumbotron">
+				<h4 align="center">Module 1</h4>
+				<br>
+				<div class="form-group">
+				<div class="row">
+				<div class="col-md-8">
+				<input class="form-control t" type="text" name="a1" placeholder="1a" size="155" required= true>
+			    </div>
+			    <div class="col-md-2">
+			    	<input class="form-control t" type="number" name="a1m" value="0" placeholder="Marks" required= true>
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" name="ca1" placeholder="CO" required= true>
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" name="ba1" placeholder="BT" required= true>
+			    </div>
+	            </div>
+	            <br>
+				<div class="row">
+				<div class="col-md-8">
+				<input class="form-control t" type="text" name="b1" placeholder="1b" size="155">
+			    </div>
+			    <div class="col-md-2">
+			    	<input class="form-control t" type="number" name="b1m" value="0" placeholder="Marks">
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" name="cb1" placeholder="CO">
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" name="bb1" placeholder="BT">
+			    </div>
+	            </div>
+	            <br>
+				<div class="row">
+				<div class="col-md-8">
+				<input class="form-control t" type="text" name="c1" placeholder="1c" size="155">
+				</div>
+				<div class="col-md-2">
+			    	<input class="form-control t" type="number" name="c1m" value="0" placeholder="Marks">
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" name="cc1" placeholder="CO">
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" name="bc1" placeholder="BT">
+			    </div>
+	            </div>
+	            <br>
+	            <div class="row">
+				<div class="col-md-8">
+				<input class="form-control t" type="text" name="d1" placeholder="1d" size="155">
+				</div>
+				<div class="col-md-2">
+			    	<input class="form-control t" type="number" name="d1m" value="0" placeholder="Marks">
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" name="cd1" placeholder="CO">
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" name="bd1" placeholder="BT">
+			    </div>
+	            </div>
+				</div>
+				<small class="form-text text-muted float-right">CO - Course Outcome BT - Blooms Toxonomy</small>
+			</header>
+			</div>
+			<div class="container">
+				<header class = "jumbotron">
+				<h4 align="center">Module 2</h4>
+				<br>
+				<div class="form-group">
+				<div class="row">
+				<div class="col-md-8">
+				<input class="form-control t" type="text" name="a2" placeholder="2a" size="155" required= true>
+			    </div>
+			    <div class="col-md-2">
+			    	<input class="form-control t" type="number" name="a2m" value="0" placeholder="Marks" required= true>
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" name="ca2" placeholder="CO" required= true>
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" name="ba2" placeholder="BT" required= true>
+			    </div>
+	            </div>
+	            <br>
+				<div class="row">
+				<div class="col-md-8">
+				<input class="form-control t" type="text" name="b2" placeholder="2b" size="155">
+			    </div>
+			    <div class="col-md-2">
+			    	<input class="form-control t" type="number" value="0" name="b2m" placeholder="Marks">
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" name="cb2" placeholder="CO">
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" name="bb2" placeholder="BT">
+			    </div>
+	            </div>
+	            <br>
+				<div class="row">
+				<div class="col-md-8">
+				<input class="form-control t" type="text" name="c2" placeholder="2c" size="155">
+				</div>
+				<div class="col-md-2">
+			    	<input class="form-control t" type="number" value="0" name="c2m" placeholder="Marks">
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" name="cc2" placeholder="CO">
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" name="bc2" placeholder="BT">
+			    </div>
+	            </div>
+	            <br>
+	            <div class="row">
+				<div class="col-md-8">
+				<input class="form-control t" type="text" name="d2" placeholder="2d" size="155">
+				</div>
+				<div class="col-md-2">
+			    	<input class="form-control t" type="number" value="0" name="d2m" placeholder="Marks">
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" name="cd2" placeholder="CO">
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" name="bd2" placeholder="BT">
+			    </div>
+	            </div>
+				</div>
+				<small class="form-text text-muted float-right">CO - Course Outcome BT - Blooms Toxonomy</small>
+			</header>
+			</div>
+			<div class="container">
+				<header class = "jumbotron">
+				<h4 align="center">Module 3</h4>
+				<br>
+				<div class="form-group">
+				<div class="row">
+				<div class="col-md-8">
+				<input class="form-control t" type="text" name="a3" placeholder="3a" size="155" required= true>
+			    </div>
+			    <div class="col-md-2">
+			    	<input class="form-control t" type="number" name="a3m" value="0" placeholder="Marks" required= true>
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" name="ca3" placeholder="CO" required= true>
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" name="ba3" placeholder="BT" required= true>
+			    </div>
+	            </div>
+	            <br>
+				<div class="row">
+				<div class="col-md-8">
+				<input class="form-control t" type="text" name="b3" placeholder="3b" size="155">
+			    </div>
+			    <div class="col-md-2">
+			    	<input class="form-control t" type="number" value="0" name="b3m" placeholder="Marks">
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" name="cb3" placeholder="CO">
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" name="bb3" placeholder="BT">
+			    </div>
+	            </div>
+	            <br>
+				<div class="row">
+				<div class="col-md-8">
+				<input class="form-control t" type="text" name="c3" placeholder="3c" size="155">
+				</div>
+				<div class="col-md-2">
+			    	<input class="form-control t" type="number" value="0" name="c3m" placeholder="Marks">
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" name="cc3" placeholder="CO">
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" name="bc3" placeholder="BT">
+			    </div>
+	            </div>
+	            <br>
+	            <div class="row">
+				<div class="col-md-8">
+				<input class="form-control t" type="text" name="d3" placeholder="3d" size="155">
+				</div>
+				<div class="col-md-2">
+			    	<input class="form-control t" type="number" name="d3m" value="0" placeholder="Marks">
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" name="cd3" placeholder="CO">
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" name="bd3" placeholder="BT">
+			    </div>
+	            </div>
+				</div>
+				<small class="form-text text-muted float-right">CO - Course Outcome BT - Blooms Toxonomy</small>
+			</header>
+			</div>
+			<div class="container">
+				<header class = "jumbotron">
+				<h4 align="center">Module 4</h4>
+				<br>
+				<div class="form-group">
+				<div class="row">
+				<div class="col-md-8">
+				<input class="form-control t" type="text" name="a4" placeholder="4a" size="155" required= true>
+			    </div>
+			   <div class="col-md-2">
+			    	<input class="form-control t" type="number" name="a4m" value="0" placeholder="Marks" required= true>
+			    </div>
+			   <div class="col-md-1">
+			    	<input class="form-control t" type="text" name="ca4" placeholder="CO" required= true>
+			    </div>
+			  <div class="col-md-1">
+			    	<input class="form-control t" type="text" name="ba4" placeholder="BT" required= true>
+			    </div>
+	            </div>
+	            <br>
+				<div class="row">
+				<div class="col-md-8">
+				<input class="form-control t" type="text" name="b4" placeholder="4b" size="155">
+			    </div>
+			    <div class="col-md-2">
+			    	<input class="form-control t" type="number" name="b4m" value="0" placeholder="Marks">
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" name="cb4" placeholder="CO">
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" name="bb4" placeholder="BT">
+			    </div>
+	            </div>
+	            <br>
+				<div class="row">
+				<div class="col-md-8">
+				<input class="form-control t" type="text" name="c4" placeholder="4c" size="155">
+				</div>
+				<div class="col-md-2">
+			    	<input class="form-control t" type="number" name="c4m" value="0" placeholder="Marks">
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" name="cc4" placeholder="CO">
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" name="bc4" placeholder="BT">
+			    </div>
+	            </div>
+	            <br>
+	            <div class="row">
+				<div class="col-md-8">
+				<input class="form-control t" type="text" name="d4" placeholder="4d" size="155">
+				</div>
+				<div class="col-md-2">
+			    	<input class="form-control t" type="number" name="d4m" value="0" placeholder="Marks">
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" name="cd4" placeholder="CO">
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" name="bd4" placeholder="BT">
+			    </div>
+	            </div>
+				</div>
+				<small class="form-text text-muted float-right">CO - Course Outcome BT - Blooms Toxonomy</small>
+			</header>
+			</div>
+			<div class="container">
+				<header class = "jumbotron">
+				<h4 align="center">Module 5</h4>
+				<br>
+				<div class="form-group">
+				<div class="row">
+				<div class="col-md-8">
+				<input class="form-control t" type="text" name="a5" placeholder="5a" size="155" required= true>
+			    </div>
+			    <div class="col-md-2">
+			    	<input class="form-control t" type="number" name="a5m" value="0" placeholder="Marks" required= true>
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" name="ca5" placeholder="CO" required= true>
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" name="ba5" placeholder="BT" required= true>
+			    </div>
+	            </div>
+	            <br>
+				<div class="row">
+				<div class="col-md-8">
+				<input class="form-control t" type="text" name="b5" placeholder="5b" size="155">
+			    </div>
+			    <div class="col-md-2">
+			    	<input class="form-control t" type="number" name="b5m" value="0" placeholder="Marks">
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" name="cb5" placeholder="CO">
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" name="bb5" placeholder="BT">
+			    </div>
+	            </div>
+	            <br>
+				<div class="row">
+				<div class="col-md-8">
+				<input class="form-control t" type="text" name="c5" placeholder="5c" size="155">
+				</div>
+				<div class="col-md-2">
+			    	<input class="form-control t" type="number" name="c5m" value="0" placeholder="Marks">
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" name="cc5" placeholder="CO">
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" name="bc5" placeholder="BT">
+			    </div>
+	            </div>
+	            <br>
+	            <div class="row">
+				<div class="col-md-8">
+				<input class="form-control t" type="text" name="d5" placeholder="5d" size="155">
+				</div>
+				<div class="col-md-2">
+			    	<input class="form-control t" type="number" name="d5m" value="0" placeholder="Marks">
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" name="cd5" placeholder="CO">
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" name="bd5" placeholder="BT">
+			    </div>
+	            </div>
+				</div>
+				<small class="form-text text-muted float-right">CO - Course Outcome BT - Blooms Toxonomy</small>
+			</header>
+			</div>
+			<div class="container">
+			<small class="form-text text-muted">Never reveal or discuss the questions with anyone.<a class="float-right" data-target="#Pinky" data-toggle="modal" href="#">Pinky Promise?</a></small>
+			<br>	
+			</div>
+			<div class="container" align="center">
+			<div class="form-group">	
+			<input class="btn btn-primary" type="Submit" value="Upload">
+		</div>
+	</div>
+		</form>
+	</header>
+</div>
+
+	<div class="modal" id="Pinky" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="form-group">
+				<form class="col-md-6 offset-md-3">
+						<h3 align="center" >Good :)</h3>
+						<div align="center">
+						<input class="btn btn-primary" type="submit" data-dismiss="modal" value="I Know :P" autofocus="autofocus">
+					</div>
+					 </form> 
+				</div>
+					</div>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			function valuate(form)
+			{
+				var errors=[];
+				var total=0;
+				var af=0;
+				var af1=0;
+				var af2=0;
+				var a1 = 0;
+				var a2 = 0;
+				var a3 = 0; 
+				var a4 = 0;
+				var bf = 0;
+				var b1 = 0;
+				var b2 = 0;
+				var b3 = 0; 
+				var b4 = 0;
+				var cf = 0;
+				var c1 = 0;
+				var c2 = 0;
+				var c3 = 0; 
+				var c4 = 0;
+				var df = 0;
+				var d1 = 0;
+				var d2 = 0;
+				var d3 = 0; 
+				var d4 = 0;
+				var ef = 0;
+				var e1 = 0;
+				var e2 = 0;
+				var e3 = 0; 
+				var e4 = 0;
+				a1 = parseInt(form.a1m.value);
+				a2 = parseInt(form.b1m.value);
+				a3 = parseInt(form.c1m.value);
+				a4 = parseInt(form.d1m.value);
+				b1 = parseInt(form.a2m.value);
+				b2 = parseInt(form.b2m.value);
+				b3 = parseInt(form.c2m.value);
+				b4 = parseInt(form.d2m.value);
+				c1 = parseInt(form.a3m.value);
+				c2 = parseInt(form.b3m.value);
+				c3 = parseInt(form.c3m.value);
+				c4 = parseInt(form.d3m.value);
+				d1 = parseInt(form.a4m.value);
+				d2 = parseInt(form.b4m.value);
+				d3 = parseInt(form.c4m.value);
+				d4 = parseInt(form.d4m.value);
+				e1 = parseInt(form.a5m.value);
+				e2 = parseInt(form.b5m.value);
+				e3 = parseInt(form.c5m.value);
+				e4 = parseInt(form.d5m.value);
+				ef = e1 + e2 + e3 + e4;
+				df = d1 + d2 + d3 + d4;
+				cf = c1 + c2 + c3 + c4;
+				bf = b1 + b2 + b3 + b4;
+				af = a1 + a2 + a3 + a4;
+				af1 = a1 + a2;
+				af2 = a1 + a2 + a3;
+				total = af + bf + cf + df + ef;
+				if(af<20)
+				{
+					errors.push("Module 1 Marks doesn't Sum Upto 20");
+				}
+				if(af > 20)
+				{
+					errors.push("Module 1 Marks Exceeds 20");
+				}
+				if(bf < 20)
+				{
+					errors.push("Module 2 Marks doesn't Sum Upto 20");
+				}
+				if(bf > 20)
+				{
+					errors.push("Module 2 Marks Exceeds 20");
+				}
+				if(cf < 20)
+				{
+					errors.push("Module 3 Marks doesn't Sum Upto 20");
+				}
+				if(cf > 20)
+				{
+					errors.push("Module 3 Marks Exceeds 20");
+				}
+				if(df < 20)
+				{
+					errors.push("Module 4 Marks doesn't Sum Upto 20");
+				}
+				if(df > 20)
+				{
+					errors.push("Module 4 Marks Exceeds 20");
+				}
+				if(ef < 20)
+				{
+					errors.push("Module 5 Marks doesn't Sum Upto 20");
+				}
+				if(ef > 20)
+				{
+					errors.push("Module 5 Marks Exceeds 20");
+				}
+				if(total < 100)
+				{
+					errors.push("Total Marks doesn't Sum Upto 100");
+				}
+				if(total > 100)
+				{
+					errors.push("Total Marks Exceeds 100");
+				}
+				if(errors.length > 0)
+				{
+					var msg = "ERRORS:\n\n";
+					for(var i = 0; i<errors.length; i++)
+					{
+						msg += errors[i] + "\n";
+					}
+					alert(msg);
+					return false;
+				}
+
+					alert("Are you sure you want to submit the Question Paper?");
+					return true;
+			}
+		</script>
+</body>
+<% include ../partials/tfooter %>

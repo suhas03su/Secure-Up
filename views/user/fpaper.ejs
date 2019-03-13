@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+<% include ../partials/uheader %>
+		<style>
+.example-print {
+    display: none;
+}
+
+.s{
+	height: 400px;
+}
+</style>
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-lg-2">
+		</div>
+		<div class="col-lg-8">
+	<legend align="center">Question Paper</legend>
+	<p align="center"><h3 align="center">Click the button below to download the Question Paper</h3><p><br>
+	<small class="form-text text-muted">Never reveal or discuss the questions with anyone.<a class="float-right" data-target="#Pinky" data-toggle="modal" href="#">Pinky Promise?</a></small><br>
+	<div align="center">
+<input class="btn btn-success btn-lg" type="submit" onclick="printDiv('printableArea')" value="Print"/>
+</div>
+</div>
+</div>
+</div>
+
+	<div class="modal" id="Pinky" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="form-group">
+				<form class="col-md-6 offset-md-3">
+						<h3 align="center" >Good :)</h3>
+						<div align="center">
+						<input class="btn btn-primary" type="submit" data-dismiss="modal" value="I Know :P" autofocus="autofocus">
+					</div>
+					 </form> 
+				</div>
+					</div>
+			</div>
+		</div>
+</body>
+
+
+
+<!-- 	<% papers.forEach(function(paper){ %>
+<div class="container">
+	<legend align="center">Question Paper</legend>
+	<br>
+	<form class="col-md-6 offset-md-3" action="#">
+	<div class="form-group">
+	<label for="Subject">Subject</label>
+	<input class="form-control" type="text" name="Subject" placeholder="<%= paper.username %>" readonly autofocus>
+	</div>
+	<div class="form-group">
+	<label for="Semester">Semester</label>
+	<input class="form-control" type="text" name="Semester" placeholder="<%= paper.semester %>" readonly autofocus>
+	</div>
+	<div class="form-group">
+	<label for="SubjectCode">Subject Code</label>
+	<input class="form-control" type="text" name="SubjectCode" placeholder="<%= paper.subjectcode %>" readonly autofocus>
+	</div>
+	</div>
+	<div class="container">
+	<header class = "jumbotron">
+	<legend align="center">Module 1</legend>
+	<br>
+	<div class="form-group">
+	<label for="a1">1a.</label>
+	<input class="form-control" autofocus type="text" name="a1" id="a1" placeholder="<%= paper.a1 %>" readonly>
+	</div>
+	<div class="form-group">
+		<label for="b1">1b.</label>
+	<input class="form-control" autofocus type="text" name="b1" id="b1" placeholder="<%= paper.b1 %>" readonly>
+	</div>
+	<div class="form-group">
+		<label for="c1">1c.</label>
+	<input class="form-control" autofocus type="text" name="c1" id="c1" placeholder="<%= paper.c1 %>" readonly>
+	</div>
+	<div class="form-group">
+		<label for="d1">1d.</label>
+	<input class="form-control" autofocus type="text" name="d1" id="d1" placeholder="<%= paper.d1 %>" readonly>
+	</div>
+	</header>
+	</div>
+	<div class="container">
+	<header class = "jumbotron">
+	<legend align="center">Module 2</legend>
+	<br><div class="form-group">
+		<label for="a2">2a.</label>
+	<input class="form-control" autofocus type="text" name="a2" id="a2" placeholder="<%= paper.a2 %>" readonly>
+	</div>
+	<div class="form-group">
+		<label for="b2">2b.</label>
+	<input class="form-control" autofocus type="text" name="b2" id="b2" placeholder="<%= paper.b2 %>" readonly>
+	</div>
+	<div class="form-group">
+		<label for="c2">2c.</label>
+	<input class="form-control" autofocus type="text" name="c2" id="c2" placeholder="<%= paper.c2 %>" readonly>
+	</div>
+	<div class="form-group">
+		<label for="d2">2d.</label>
+	<input class="form-control" autofocus type="text" name="d2" id="d2" placeholder="<%= paper.d2 %>" readonly>
+	</div>
+	</header>
+	</div>
+	<div class="container">
+	<header class = "jumbotron">
+	<legend align="center">Module 3</legend>
+	<br>
+	<div class="form-group">
+		<label for="a3">3a.</label>
+	<input class="form-control" autofocus type="text" name="a3" id="a3" placeholder="<%= paper.a3 %>" readonly>
+	</div>
+	<div class="form-group">
+		<label for="b3">3b.</label>
+	<input class="form-control" autofocus type="text" name="b3" id="b3" placeholder="<%= paper.b3 %>" readonly>
+	</div>
+	<div class="form-group">
+		<label for="c3">3c.</label>
+	<input class="form-control" autofocus type="text" name="c3" id="c3" placeholder="<%= paper.c3 %>" readonly>
+	</div>
+	<div class="form-group">
+		<label for="d3">3d.</label>
+	<input class="form-control" autofocus type="text" name="d3" id="d3" placeholder="<%= paper.d3 %>" readonly>
+	</div>
+	</header>
+	</div>
+	<div class="container">
+	<header class = "jumbotron">
+	<legend align="center">Module 4</legend>
+	<br>
+	<div class="form-group">
+		<label for="a4">4a.</label>
+	<input class="form-control" autofocus type="text" name="a4" id="a4" placeholder="<%= paper.a4 %>" readonly>
+	</div>
+	<div class="form-group">
+		<label for="b4">4b.</label>
+	<input class="form-control" autofocus type="text" name="b4" id="b4" placeholder="<%= paper.b4 %>" readonly>
+	</div>
+	<div class="form-group">
+		<label for="c4">4c.</label>
+	<input class="form-control" autofocus type="text" name="c4" id="c4" placeholder="<%= paper.c4 %>" readonly>
+	</div>
+	<div class="form-group">
+		<label for="d4">4d.</label>
+	<input class="form-control" autofocus type="text" name="d4" id="d4" placeholder="<%= paper.d4 %>" readonly>
+	</div>
+	</header>
+	</div>
+	<div class="container">
+	<header class = "jumbotron">
+	<legend align="center">Module 5</legend>
+	<br>
+	<div class="form-group">
+		<label for="a5">5a.</label>
+	<input class="form-control" autofocus type="text" name="a5" id="a5" placeholder="<%= paper.a5 %>" readonly>
+	</div>
+	<div class="form-group">
+		<label for="b5">5b.</label>
+	<input class="form-control" autofocus type="text" name="b5" id="b5" placeholder="<%= paper.b5 %>" readonly>
+	</div>
+	<div class="form-group">
+		<label for="c5">5c.</label>
+	<input class="form-control" autofocus type="text" name="c5" id="c5" placeholder="<%= paper.c5 %>" readonly>
+	</div>
+	<div class="form-group">
+		<label for="d5">5d.</label>
+	<input class="form-control" autofocus type="text" name="d5" id="d5" placeholder="<%= paper.d5 %>" readonly>
+	</div>
+	</header>
+	</div>	
+	<div class="container" align="center">
+	<div class="form-group">
+	<input class="btn btn-primary" type="submit" value="Print">
+	</div>
+</div>
+</form>
+</div>
+<% }) %> -->
+
+<div id="printableArea" class="example-print">
+	<style>
+	.example-print {
+    display: none;
+					}
+		.t{
+	text-align: center;
+		}
+		.text{
+			font-family: "Times New Roman", Times, serif;
+			font-size: 30px;
+		}
+				.text1{
+			font-family: "Times New Roman", Times, serif;
+			font-size: 25px;
+		}
+	</style>
+		<legend width="85%" align="center">
+		<p>
+			<h6>Sri Adichunchanagiri Shikshana Trust(R).</h6>
+		</p>
+			<p>
+				<h1>SJB institute of technology</h1>
+		</p>
+		<p>
+			<h6>(Affiliated to Visvesvaraya Technological University, Belagavi and approved by AICTE, New Delhi.)</h6>
+		</p>
+					<p>
+						<h4 align="right">USN</h4>
+				<table border="2" align="right">
+					<tr>
+							<td width="40"><br></td>
+							<td width="40"></td>
+							<td width="40"></td>
+							<td width="40"></td>
+							<td width="40"></td>
+							<td width="40"></td>
+							<td width="40"></td>
+							<td width="40"></td>
+							<td width="40"></td>
+							<td width="40"></td>
+					</tr>
+				</table>
+			</p>
+						<p>
+			<br>
+			</p>
+	</legend>
+	<h3 align="center"><u>External Question Paper</u></h3>
+
+      <% papers.forEach(function(paper){ %>
+<table class="text" id="table" border="5" align="Center" width="85%" height="50">
+	<h3 align="Center"><%= paper.subjectname %></h3>
+	<tr >
+		<!-- <th>Sr.No</th>  -->
+		<th width="3%" class="t">Q.No</th>
+		<th width="79%" class="t">Questions</th>
+		<th width="6%" class="t">Marks</th>
+		<th width="6%" class="t">CO</th>
+		<th width="6%" class="t">BT</th>
+	</tr>
+		<tr>
+		<td colspan="5"><h6 class="text1">Module 1</h6></td>
+	</tr>
+	<tr>
+		<!-- <td rowspan="5">1</td> -->
+		<td>1a</td>
+		<td class="text"><%= paper.a1 %></td>
+		<td><%= paper.a1m %></td>
+		<td><%= paper.ca1 %></td>
+		<td><%= paper.ba1 %></td>
+	</tr>
+	<tr>
+		<td>1b</td>
+		<td><%= paper.b1 %></td>
+		<td><%= paper.b1m %></td>
+		<td><%= paper.cb1 %></td>
+		<td><%= paper.bb1 %></td>
+	</tr>
+	<tr>
+		<td>1c</td>
+		<td><%= paper.c1 %></td>
+		<td><%= paper.c1m %></td>
+		<td><%= paper.cc1 %></td>
+		<td><%= paper.bc1 %></td>
+	</tr>
+	<tr>
+		<td>1d</td>
+		<td><%= paper.d1 %></td>
+		<td><%= paper.d1m %></td>
+		<td><%= paper.cd1 %></td>
+		<td><%= paper.bd1 %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td colspan="5"><h6 class="text1">Module 2</h6></td>
+	</tr>
+	<tr>
+		<!-- <td rowspan="5">2</td> -->
+		<td>2a</td>
+		<td><%= paper.a2 %></td>
+		<td><%= paper.a2m %></td>
+		<td><%= paper.ca2 %></td>
+		<td><%= paper.ba2 %></td>
+	</tr>
+	<tr>
+		<td>2b</td>
+		<td><%= paper.b2 %></td>
+		<td><%= paper.b2m %></td>
+		<td><%= paper.cb2 %></td>
+		<td><%= paper.bb2 %></td>
+	</tr>
+	<tr>
+		<td>2c</td>
+		<td><%= paper.c2 %></td>
+		<td><%= paper.c2m %></td>
+		<td><%= paper.cc2 %></td>
+		<td><%= paper.bc2 %></td>
+	</tr>
+	<tr>
+		<td>2d</td>
+		<td><%= paper.d2 %></td>
+		<td><%= paper.d2m %></td>
+		<td><%= paper.cd2 %></td>
+		<td><%= paper.bd2 %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td colspan="5"><h6 class="text1">Module 3</h6></td>
+	</tr>
+	<tr>
+		<!-- <td rowspan="5">3</td> -->
+		<td>3a</td>
+		<td><%= paper.a3 %></td>
+		<td><%= paper.a3m %></td>
+		<td><%= paper.ca3 %></td>
+		<td><%= paper.ba3 %></td>
+	</tr>
+	<tr>
+		<td>3b</td>
+		<td><%= paper.b3 %></td>
+		<td><%= paper.b3m %></td>
+		<td><%= paper.cb3 %></td>
+		<td><%= paper.bb3 %></td>
+	</tr>
+	<tr>
+		<td>3c</td>
+		<td><%= paper.c3 %></td>
+		<td><%= paper.c3m %></td>
+		<td><%= paper.cc3 %></td>
+		<td><%= paper.bc3 %></td>
+	</tr>
+	<tr>
+		<td>3d</td>
+		<td><%= paper.d3 %></td>
+		<td><%= paper.d3m %></td>
+		<td><%= paper.cd3 %></td>
+		<td><%= paper.bd3 %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td colspan="5"><h6 class="text1">Module 4</h6></td>
+	</tr>
+	<tr>
+		<!-- <td rowspan="5">4</td> -->
+		<td>4a</td>
+		<td><%= paper.a4 %></td>
+		<td><%= paper.a4m %></td>
+		<td><%= paper.ca4 %></td>
+		<td><%= paper.ba4 %></td>
+	</tr>
+	<tr>
+		<td>4b</td>
+		<td><%= paper.b4 %></td>
+		<td><%= paper.b4m %></td>
+		<td><%= paper.cb4 %></td>
+		<td><%= paper.bb4 %></td>
+	</tr>
+	<tr>
+		<td>4c</td>
+		<td><%= paper.c4 %></td>
+		<td><%= paper.c4m %></td>
+		<td><%= paper.cc4 %></td>
+		<td><%= paper.bc4 %></td>
+	</tr>
+	<tr>
+		<td>4d</td>
+		<td><%= paper.d4 %></td>
+		<td><%= paper.d4m %></td>
+		<td><%= paper.cd4 %></td>
+		<td><%= paper.bd4 %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td colspan="5"><h6 class="text1">Module 5</h6></td>
+	</tr>
+	<tr>
+		<!-- <td rowspan="5">5</td> -->
+		<td>5a</td>
+		<td><%= paper.a5 %></td>
+		<td><%= paper.a5m %></td>
+		<td><%= paper.ca5 %></td>
+		<td><%= paper.ba5 %></td>
+	</tr>
+	<tr>
+		<td>5b</td>
+		<td><%= paper.b5 %></td>
+		<td><%= paper.b5m %></td>
+		<td><%= paper.cb5 %></td>
+		<td><%= paper.bb5 %></td>
+	</tr>
+	<tr>
+		<td>5c</td>
+		<td><%= paper.c5 %></td>
+		<td><%= paper.c5m %></td>
+		<td><%= paper.cc5 %></td>
+		<td><%= paper.bc5 %></td>
+	</tr>
+	<tr>
+		<td>5d</td>
+		<td><%= paper.d5 %></td>
+		<td><%= paper.d5m %></td>
+		<td><%= paper.cd5 %></td>
+		<td><%= paper.bd5 %></td>
+	</tr>
+	<% }) %>
+</table>
+</div>
+
+
+<!-- ret date -->
+<div class="example-print">
+<% papers.forEach(function(paper){ %>
+<input type="text" name="fdate" value="<%= paper.d %>" id="fdate">
+<input type="text" name="f" value="<%= paper.d5 %>" id="f">
+<% }) %>
+</div>
+
+
+
+<script type="text/javascript">
+
+
+//rear 
+	var date = document.getElementById('fdate').value;
+	var present;
+	var deadline1;
+	// alert(date);
+			var pre = new Date();
+	    	present = pre.toString();
+	    	// alert(present);
+			var deadline2;
+			var deadline3;
+			var deadline4;
+			var temp1;
+			var temp2;
+			var temp3;
+			var temp4;
+			var data1;
+			var data2;
+			var data3;
+			var data4;
+			var buffer1  = 15;
+			var buffer2 = 30;
+			var buffer3 = 30;
+			var buffer4 = 45;
+// rear technology
+// 15 mins before
+data1 = new Date(date);
+temp1 = data1;
+var startdate1 = new Date(data1);
+startdate1.setMinutes(temp1.getMinutes() - buffer1);
+deadline1 = startdate1.toString();
+// 30 mins before
+data2 = new Date(date);
+temp2 = data2;
+var startdate2 = new Date(data2);
+startdate2.setMinutes(temp2.getMinutes() - buffer2);
+deadline2 = startdate2.toString();
+// 30 mins after
+data3 = new Date(date);
+temp3 = data3;
+var startdate3 = new Date(data3);
+startdate3.setMinutes(temp3.getMinutes() + buffer3);
+deadline3 = startdate3.toString();
+// 45 mins after
+data4 = new Date(date);
+temp4 = data4;
+var startdate4 = new Date(data4);
+startdate4.setMinutes(temp4.getMinutes() + buffer4);
+deadline4 = startdate4.toString();
+
+//report
+var pre = new Date(present);
+var dat = new Date(date);
+var presenttodate = pre.toLocaleDateString();
+var datetodate = dat.toLocaleDateString();
+// alert(presenttodate);
+// alert(datetodate);
+
+// end of rear
+//rer end
+function printDiv(divName) {
+     var printContents = document.getElementById(divName).innerHTML;
+     var originalContents = document.body.innerHTML;
+     if((present>date)&&(presenttodate>=datetodate)&&(present<deadline4))
+     {
+     document.body.innerHTML = printContents;
+
+     window.print();
+
+     document.body.innerHTML = originalContents;
+ }
+ else
+ {
+ 	window.print();
+ }
+}
+</script>
+<% include ../partials/ufooter %>

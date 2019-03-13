@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<% include partials/header %>
+	<div class="container">
+			<form class="col-md-6 offset-md-3" action="/teachers/register" method="POST">
+			<legend align="center"><i class="fas fa-user-plus"></i> Teacher SignUp</legend>
+				<div class="form-row">
+				<div class="form-group col-md-6">
+				<label for="fname">First Name</label>
+				<input type="text" class="form-control" name="fname" placeholder="First Name" required="" autofocus>
+				</div>
+				<div class="form-group col-md-6">
+				<label for="lname">Last Name</label>
+				<input type="text" class="form-control" name="lname" placeholder="Last Name" autofocus>
+				</div>
+				</div>
+				<div class="form-group">
+				<label for="college">College</label>
+				<input class="form-control" type="text" name="college" placeholder="EX:SJB Institute Of Technology" required="" autofocus>
+				</div>
+				<div class="form-group">
+				<label for="email">Email ID</label>
+				<input class="form-control" type="email" name="emailid" aria-describedby="emailHelp" placeholder="EX:abcde@xyz.com" required="" autofocus>
+				<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+				</div>
+				<div class="form-group">
+				<label for="pno">Phone number</label>
+				<input class="form-control" type="phonenumber" name="pno" aria-describedby="spam" placeholder="9898989898" required="" autofocus>
+				<small id="spam" class="form-text text-muted">We'll never spam you.</small>
+				</div>
+				<div class="form-group">
+				<label for="password">Password</label>
+				<input class="form-control" type="password" name="password"  aria-describedby="pass" required="" autofocus>
+				<small id="pass" class="form-text text-muted">Never share your Password with anyone else.</small>	
+				</div>
+				<div class="form-group">			
+				<button class="btn btn-primary">SignUp</button>
+				<a class="float-right" href="/homes">Go Back!</a>
+				</div>
+			</form>
+	</div>
+<% include partials/footer %>

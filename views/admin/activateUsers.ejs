@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<% include ../partials/aheader %>
+		<style>
+			table tr:not(:first-child){
+				cursor: pointer;transition: all .25s ease-in-out;
+			}
+			table tr:hover{background-color: #ddd;}
+						 body,head,html {
+          font-family: 'Montserrat', sans-serif;
+    						}
+		</style>
+	</head>
+	<body>
+
+<div class="container">
+	<legend align="center">Activate Users</legend>
+<form class="col-md-6 offset-md-3" action="/admins/activate" method="POST">
+	<div class="form-row">
+	<div class="form-group col-md-6">
+	<input aria-describedby="help" class="form-control" type="text" name="emailid" id="emailid" placeholder="EmailID" autofocus="autofocus">
+	<small id="help" class="form-text text-muted">Select an User and Click to either Activate or Deactivate.</small>
+</div>
+<div class="form-group col-md-6">
+	<input class="btn btn-primary" type="submit" value="Activate/Deactivate">
+</div>
+</form>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<style type="text/css">
+			.t{
+	text-align: center;
+		}
+</style>
+<div class="col-md-6 offset-md-3" align="center">
+	<legend>Registered Users</legend>
+<table id="table" border='5' >
+	<tr>
+		<th class="t">Username</th>
+		<th class="t">College</th>
+		<th class="t">EmailID</th>
+		<th class="t">PhoneNumber</th>
+	</tr>
+	<% users.forEach(function(user){ %>
+	<tr class="t">		
+		<td><%= user.username %></td>
+		<td><%= user.college %></td>
+		<td><%= user.emailid %></td>
+		<td><%= user.phonenumber %></td>
+	</tr>
+	<% }) %>
+</table>
+</div>
+
+<script>
+	var table = document.getElementById('table'),rIndex;
+	
+	for(var i = 1; i < table.rows.length; i++)
+	{
+		table.rows[i].onclick = function()
+		{
+			rIndex	=	this.rowIndex;
+			console.log(rIndex);
+			document.getElementById("emailid").value	=	this.cells[2].innerHTML;
+		};
+	}
+
+</script>
+<% include ../partials/afooter %>

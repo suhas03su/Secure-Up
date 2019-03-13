@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html>
+<% include ../partials/aheader %>
+
+		<style type="text/css">
+			.t{
+	text-align: center;
+		}
+</style>
+
+<% papers.forEach(function(paper){ %>
+<div class="container" align="center">
+	<legend align="center">Question Paper</legend>
+	<br>
+	<form class="col-md-6 offset-md-3" action="/admins/generatequestionpaper" method="POST">
+	<div class="form-group">
+	<label for="Subject">Subject</label>
+	<input class="form-control t" type="text" name="Subject" value="<%= paper.subjectname %>" autofocus>
+	</div>
+	<div class="form-group">
+	<label for="Semester">Semester</label>
+	<input class="form-control t" type="text" name="Semester" value="<%= paper.semester %>" readonly autofocus>
+	</div>
+	<div class="form-group">
+	<label for="SubjectCode">Subject Code</label>
+	<input class="form-control t" type="text" name="SubjectCode" value="<%= paper.subjectcode %>" readonly autofocus>
+	</div>
+	<div class="form-group" align="center">
+		<label for="d">Date  Time</label>
+				<input class="form-control t" autofocus type="datetime-local" name="edate" placeholder ="edate" required="" autofocus="autofocus">
+				<small class="form-text text-muted">Please Fill the time in 24 Hour Format.</small>
+	</div>
+	<small class="form-text text-muted">Select Date and Time when the Question paper should be made available for the user.</small>
+	<br>
+	</div>
+	</div>
+	<div class="container">
+	<header class = "jumbotron">
+	<legend align="center">MODULE 1</legend>
+	<br>
+	<div class="form-group">
+	<div class="row">
+	<div class="col-md-8">	
+	<label for="a1">1a.</label>
+	</div>
+	<div class="col-md-2" align="center">
+	<label for="a1">Marks</label>
+	</div>
+	<div class="col-md-1" align="center">
+	<label for="a1">CO</label>
+	</div>
+	<div class="col-md-1" align="center">
+	<label for="a1">BT</label>
+	</div>
+	</div>	
+	<div class="row">
+	<div class="col-md-8">
+	<input class="form-control t" autofocus type="text" name="a1" id="a1" value="<%= paper.a1 %>" readonly>
+	</div>
+			    <div class="col-md-2">
+			    	<input class="form-control t" type="number" id="a1m" name="a1m" value="<%= paper.a1m %>" readonly >
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" id="ca1"  name="ca1" value="<%= paper.ca1 %>" readonly>
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" id="ba1" name="ba1" value="<%= paper.ba1 %>" readonly >
+			    </div>
+	            </div>
+	        </div>
+	<div class="form-group">	
+		<label for="b1">1b.</label>
+		<div class="row">
+		<div class="col-md-8">
+	<input class="form-control t" autofocus type="text" name="b1" id="b1" value="<%= paper.b1 %>" readonly>
+	</div>
+			    <div class="col-md-2">
+			    	<input class="form-control t" type="number" id="b1m" name="b1m" value="<%= paper.b1m %>" readonly >
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" id="cb1" name="cb1" value="<%= paper.cb1 %>" readonly>
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" id="bb1" name="bb1" value="<%= paper.bb1 %>" readonly >
+			    </div>
+	            </div>
+	</div>
+	<div class="form-group">
+		<label for="c1">1c.</label>
+		<div class="row">
+		<div class="col-md-8">
+	<input class="form-control t" autofocus type="text" name="c1" id="c1" value="<%= paper.c1 %>" readonly>
+	</div>
+			    <div class="col-md-2">
+			    	<input class="form-control t" type="number" id="c1m" name="c1m" value="<%= paper.c1m %>" readonly >
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" id="cc1" name="cc1" value="<%= paper.cc1 %>" readonly>
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" id="bc1" name="bc1" value="<%= paper.bc1 %>" readonly >
+			    </div>
+	            </div>
+	</div>
+	<div class="form-group">
+		<label for="d1">1d.</label>
+		<div class="row">
+		<div class="col-md-8">
+	<input class="form-control t" autofocus type="text" name="d1" id="d1" value="<%= paper.d1 %>" readonly>
+	</div>
+			    <div class="col-md-2">
+			    	<input class="form-control t" type="number" id="d1m" name="d1m" value="<%= paper.d1m %>" readonly >
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" id="cd1" name="cd1" value="<%= paper.cd1 %>" readonly>
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" id="bd1" name="bd1" value="<%= paper.bd1 %>" readonly >
+			    </div>
+	            </div>
+	</div>
+	</header>
+	</div>
+	<div class="container">
+	<header class = "jumbotron">
+	<legend align="center">MODULE 2</legend>
+	<br><div class="form-group">
+		<div class="row">
+	<div class="col-md-8">	
+	<label for="a1">2a.</label>
+	</div>
+	<div class="col-md-2" align="center">
+	<label for="a1">Marks</label>
+	</div>
+	<div class="col-md-1" align="center">
+	<label for="a1">CO</label>
+	</div>
+	<div class="col-md-1" align="center">
+	<label for="a1">BT</label>
+	</div>
+	</div>
+		<div class="row">
+		<div class="col-md-8">
+	<input class="form-control t" autofocus type="text" name="a2" id="a2" value="<%= paper.a2 %>" readonly>
+	</div>
+			    <div class="col-md-2">
+			    	<input class="form-control t" type="number" id="a2m" name="a2m" value="<%= paper.a2m %>" readonly >
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" id="ca2" name="ca2" value="<%= paper.ca2 %>" readonly>
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" id="ba2" name="ba2" value="<%= paper.ba2 %>" readonly >
+			    </div>
+	            </div>
+	</div>
+	<div class="form-group">
+		<label for="a1">2b.</label>
+		<div class="row">
+		<div class="col-md-8">
+	<input class="form-control t" autofocus type="text" name="b2" id="b2" value="<%= paper.b2 %>" readonly>
+	</div>
+			    <div class="col-md-2">
+			    	<input class="form-control t" type="number" id="b2m" name="b2m" value="<%= paper.b2m %>" readonly >
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" id="cb2" name="cb2" value="<%= paper.cb2 %>" readonly>
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" id="bb2" name="bb2" value="<%= paper.bb2 %>" readonly >
+			    </div>
+	            </div>
+	</div>
+	<div class="form-group">
+		<label for="c2">2c.</label>
+		<div class="row">
+		<div class="col-md-8">
+	<input class="form-control t" autofocus type="text" name="c2" id="c2" value="<%= paper.c2 %>" readonly>
+	</div>
+			    <div class="col-md-2">
+			    	<input class="form-control t" type="number" id="c2m" name="c2m" value="<%= paper.c2m %>" readonly >
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" id="cc2" name="cc2" value="<%= paper.cc2 %>" readonly>
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" id="bc2" name="bc2" value="<%= paper.bc2 %>" readonly >
+			    </div>
+	            </div>
+	</div>
+	<div class="form-group">
+		<label for="d2">2d.</label>
+		<div class="row">
+		<div class="col-md-8">
+	<input class="form-control t" autofocus type="text" name="d2" id="d2" value="<%= paper.d2 %>" readonly>
+	</div>
+			    <div class="col-md-2">
+			    	<input class="form-control t" type="number" id="d2m" name="d2m" value="<%= paper.d2m %>" readonly >
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" id="cd2" name="cd2" value="<%= paper.cd2 %>" readonly>
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" id="bd2" name="bd2" value="<%= paper.bd2 %>" readonly >
+			    </div>
+	            </div>
+	</div>
+	</header>
+	</div>
+	<div class="container">
+	<header class = "jumbotron">
+	<legend align="center">MODULE 3</legend>
+	<br>
+	<div class="form-group">
+		<div class="row">
+	<div class="col-md-8">	
+	<label for="a1">3a.</label>
+	</div>
+	<div class="col-md-2" align="center">
+	<label for="a1">Marks</label>
+	</div>
+	<div class="col-md-1" align="center">
+	<label for="a1">CO</label>
+	</div>
+	<div class="col-md-1" align="center">
+	<label for="a1">BT</label>
+	</div>
+	</div>
+		<div class="row">
+		<div class="col-md-8">
+	<input class="form-control t" autofocus type="text" name="a3" id="a3" value="<%= paper.a3 %>" readonly>
+	</div>
+			    <div class="col-md-2">
+			    	<input class="form-control t" type="number" id="a3m" name="a3m" value="<%= paper.a3m %>" readonly >
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" id="ca3" name="ca3" value="<%= paper.ca3 %>" readonly>
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" id="ba3" name="ba3" value="<%= paper.ba3 %>" readonly >
+			    </div>
+	            </div>
+	</div>
+	<div class="form-group">
+		<label for="b3">3b.</label>
+		<div class="row">
+		<div class="col-md-8">
+	<input class="form-control t" autofocus type="text" name="b3" id="b3" value="<%= paper.b3 %>" readonly>
+	</div>
+			    <div class="col-md-2">
+			    	<input class="form-control t" type="number" id="b3m" name="b3m" value="<%= paper.b3m %>" readonly >
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" id="cb3" name="cb3" value="<%= paper.cb3 %>" readonly>
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" id="bb3" name="bb3" value="<%= paper.bb3 %>" readonly >
+			    </div>
+	            </div>
+	</div>
+	<div class="form-group">
+		<label for="c3">3c.</label>
+		<div class="row">
+		<div class="col-md-8">
+	<input class="form-control t" autofocus type="text" name="c3" id="c3" value="<%= paper.c3 %>" readonly>
+	</div>
+			    <div class="col-md-2">
+			    	<input class="form-control t" type="number" id="c3m" name="c3m" value="<%= paper.c3m %>" readonly >
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" id="cc3" name="cc3" value="<%= paper.cc3 %>" readonly>
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" id="bc3" name="bc3" value="<%= paper.bc3 %>" readonly >
+			    </div>
+	            </div>
+	</div>
+	<div class="form-group">
+		<label for="d3">3d.</label>
+		<div class="row">
+		<div class="col-md-8">
+	<input class="form-control t" autofocus type="text" name="d3" id="d3" value="<%= paper.d3 %>" readonly>
+	</div>
+			    <div class="col-md-2">
+			    	<input class="form-control t" type="number" id="d3m" name="d3m" value="<%= paper.d3m %>" readonly >
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" id="cd3" name="cd3" value="<%= paper.cd3 %>" readonly>
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" id="bd3" name="bd3" value="<%= paper.bd3 %>" readonly >
+			    </div>
+	            </div>
+	</div>
+	</header>
+	</div>
+	<div class="container">
+	<header class = "jumbotron">
+	<legend align="center">MODULE 4</legend>
+	<br>
+	<div class="form-group">
+		<div class="row">
+	<div class="col-md-8">	
+	<label for="a1">4a.</label>
+	</div>
+	<div class="col-md-2" align="center">
+	<label for="a1">Marks</label>
+	</div>
+	<div class="col-md-1" align="center">
+	<label for="a1">CO</label>
+	</div>
+	<div class="col-md-1" align="center">
+	<label for="a1">BT</label>
+	</div>
+	</div>
+		<div class="row">
+		<div class="col-md-8">
+	<input class="form-control t" autofocus type="text" name="a4" id="a4" value="<%= paper.a4 %>" readonly>
+	</div>
+			    <div class="col-md-2">
+			    	<input class="form-control t" type="number" id="a4m" name="a4m" value="<%= paper.a4m %>" readonly >
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" id="ca4" name="ca4" value="<%= paper.ca4 %>" readonly>
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" id="ba4" name="ba4" value="<%= paper.ba4 %>" readonly >
+			    </div>
+	            </div>
+	</div>
+	<div class="form-group">
+		<label for="b4">4b.</label>
+		<div class="row">
+		<div class="col-md-8">
+	<input class="form-control t" autofocus type="text" name="b4" id="b4" value="<%= paper.b4 %>" readonly>
+	</div>
+			    <div class="col-md-2">
+			    	<input class="form-control t" type="number" id="b4m" name="b4m" value="<%= paper.b4m %>" readonly >
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" id="cb4" name="cb4" value="<%= paper.cb4 %>" readonly>
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" id="bb4" name="bb4" value="<%= paper.bb4 %>" readonly >
+			    </div>
+	            </div>
+	</div>
+	<div class="form-group">
+		<label for="c4">4c.</label>
+		<div class="row">
+		<div class="col-md-8">
+	<input class="form-control t" autofocus type="text" name="c4" id="c4" value="<%= paper.c4 %>" readonly>
+	</div>
+			    <div class="col-md-2">
+			    	<input class="form-control t" type="number" id="c4m" name="c4m" value="<%= paper.c4m %>" readonly >
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" id="cc4" name="cc4" value="<%= paper.cc4 %>" readonly>
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" id="bc4" name="bc4" value="<%= paper.bc4 %>" readonly >
+			    </div>
+	            </div>
+	</div>
+	<div class="form-group">
+		<label for="d4">4d.</label>
+		<div class="row">
+		<div class="col-md-8">
+	<input class="form-control t" autofocus type="text" name="d4" id="d4" value="<%= paper.d4 %>" readonly>
+	</div>
+			    <div class="col-md-2">
+			    	<input class="form-control t" type="number" id="d4m" name="d4m" value="<%= paper.d4m %>" readonly >
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" id="cd4" name="cd4" value="<%= paper.cd4 %>" readonly>
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" id="bd4" name="bd4" value="<%= paper.bd4 %>" readonly >
+			    </div>
+	            </div>
+	</div>
+	</header>
+	</div>
+	<div class="container">
+	<header class = "jumbotron">
+	<legend align="center">MODULE 5</legend>
+	<br>
+	<div class="form-group">
+		<div class="row">
+	<div class="col-md-8">	
+	<label for="a1">5a.</label>
+	</div>
+	<div class="col-md-2" align="center">
+	<label for="a1">Marks</label>
+	</div>
+	<div class="col-md-1" align="center">
+	<label for="a1">CO</label>
+	</div>
+	<div class="col-md-1" align="center">
+	<label for="a1">BT</label>
+	</div>
+	</div>
+		<div class="row">
+		<div class="col-md-8">
+	<input class="form-control t" autofocus type="text" name="a5" id="a5" value="<%= paper.a5 %>" readonly>
+	</div>
+			    <div class="col-md-2">
+			    	<input class="form-control t" type="number" id="a5m" name="a5m" value="<%= paper.a5m %>" readonly >
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" id="ca5" name="ca5" value="<%= paper.ca5 %>" readonly>
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" id="ba5" name="ba5" value="<%= paper.ba5 %>" readonly >
+			    </div>
+	            </div>
+	</div>
+	<div class="form-group">
+		<label for="b5">5b.</label>
+		<div class="row">
+		<div class="col-md-8">
+	<input class="form-control t" autofocus type="text" name="b5" id="b5" value="<%= paper.b5 %>" readonly>
+	</div>
+			    <div class="col-md-2">
+			    	<input class="form-control t" type="number" id="b5m" name="b5m" value="<%= paper.b5m %>" readonly >
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" id="cb5" name="cb5" value="<%= paper.cb5 %>" readonly>
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" id="bb5" name="bb5" value="<%= paper.bb5 %>" readonly >
+			    </div>
+	            </div>
+	</div>
+	<div class="form-group">
+		<label for="c5">5c.</label>
+		<div class="row">
+		<div class="col-md-8">
+	<input class="form-control t" autofocus type="text" name="c5" id="c5" value="<%= paper.c5 %>" readonly>
+	</div>
+			    <div class="col-md-2">
+			    	<input class="form-control t" type="number" id="c5m" name="c5m" value="<%= paper.c5m %>" readonly >
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" id="cc5" name="cc5" value="<%= paper.cc5 %>" readonly>
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" id="bc5" name="bc5" value="<%= paper.bc5 %>" readonly >
+			    </div>
+	            </div>
+	</div>
+	<div class="form-group">
+		<label for="d5">5d.</label>
+		<div class="row">
+		<div class="col-md-8">
+	<input class="form-control t" autofocus type="text" name="d5" id="d5" value="<%= paper.d5 %>" readonly>
+	</div>
+			    <div class="col-md-2">
+			    	<input class="form-control t" type="number" id="d5m" name="d5m" value="<%= paper.d5m %>" readonly >
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" id="cd5" name="cd5" value="<%= paper.cd5 %>" readonly>
+			    </div>
+			    <div class="col-md-1">
+			    	<input class="form-control t" type="text" id="bd5" name="bd5" value="<%= paper.bd5 %>" readonly >
+			    </div>
+	            </div>
+	</div>
+	</header>
+	</div>	
+	<div class="container">
+	<small class="form-text text-muted">Never reveal or discuss the questions with anyone.<a class="float-right" data-target="#Pinky" data-toggle="modal" href="#">Pinky Promise?</a></small>
+	<br>	
+	</div>
+	<!-- <input type="number" name="hh" value="hh"><input type="number" name="mm" value="mm"><input type="number" name="ss" value="ss"> -->
+	<div class="container" align="center">
+	<div class="form-group">
+	<input class="btn btn-primary" type="submit" value="Encrypt And Save">
+	</div>
+</div>
+</form>
+</div>
+<% }) %>
+
+	<div class="modal" id="Pinky" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="form-group">
+				<form class="col-md-6 offset-md-3">
+						<h3 align="center" >Good :)</h3>
+						<div align="center">
+						<input class="btn btn-primary" type="submit" data-dismiss="modal" value="I Know :P" autofocus="autofocus">
+					</div>
+					 </form> 
+				</div>
+					</div>
+			</div>
+		</div>
+</body>
+
+<% include ../partials/afooter %>
+
+<!-- unwanted region -->
+<!-- <% papers.forEach(function(paper){ %>
+<table id="table" border="5" align="Center">
+	<h3 align="Center"><%= paper.subjectname %></h3>
+	<tr>
+		<th>Sr.No</th> -->
+<!-- 		<th>Q.No</th>
+		<th>Questions</th>
+		<th>CO</th>
+		<th>BT</th>
+	</tr>
+	<tr> -->
+		<!-- <td rowspan="5">1</td> -->
+		<!-- <td>1a</td> -->
+		<!-- <td><%= paper.a1 %></td> -->
+<!-- 		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>1b</td>
+		<td><%= paper.b1 %></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>1c</td>
+		<td><%= paper.c1 %></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>1d</td>
+		<td><%= paper.d1 %></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+
+	<tr> -->
+		<!-- <td rowspan="5">2</td> -->
+<!-- 		<td>2a</td>
+		<td><%= paper.a2 %></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2b</td>
+		<td><%= paper.b2 %></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2c</td>
+		<td><%= paper.c2 %></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2d</td>
+		<td><%= paper.d2 %></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+
+	<tr> -->
+		<!-- <td rowspan="5">3</td> -->
+<!-- 		<td>3a</td>
+		<td><%= paper.a3 %></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>3b</td>
+		<td><%= paper.b3 %></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>3c</td>
+		<td><%= paper.c3 %></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>3d</td>
+		<td><%= paper.d3 %></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+
+	<tr> -->
+		<!-- <td rowspan="5">4</td> -->
+<!-- 		<td>4a</td>
+		<td><%= paper.a4 %></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>4b</td>
+		<td><%= paper.b4 %></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>4c</td>
+		<td><%= paper.c4 %></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>4d</td>
+		<td><%= paper.d4 %></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+
+	<tr> -->
+		<!-- <td rowspan="5">5</td> -->
+<!-- 		<td>5a</td>
+		<td><%= paper.a5 %></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>5b</td>
+		<td><%= paper.b5 %></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>5c</td>
+		<td><%= paper.c5 %></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>5d</td>
+		<td><%= paper.d5 %></td>
+		<td></td>
+		<td></td>
+	</tr> -->
+	<!--<tr>
+		<td><button data-target="#choose">Choose</button></td>
+	</tr>-->
+<!-- 	<% }) %>
+</table> -->  
+
+<!-- <script>
+	// function register(){
+	// var table = document.getElementById('table'),rIndex;
+	// 	// table.rows[i].onclick = function()
+	// 	// {
+	// 		// rIndex	=	table.rowIndex;
+	// 		// console.log(rIndex);
+	// 		table.rows[25].cells[0].onclick = function(){
+	// 			var index = this.parentElement;
+	// 			alert(index);
+			
+		
+			var table = document.getElementById('table'),rIndex;
+			document.getElementById("a1").value	=	table.rows[1].cells[1].innerHTML;
+			document.getElementById("b1").value	=	table.rows[2].cells[1].innerHTML;
+			document.getElementById("c1").value	=	table.rows[3].cells[1].innerHTML;
+			document.getElementById("d1").value	=	table.rows[4].cells[1].innerHTML;
+			document.getElementById("a2").value	=	table.rows[6].cells[1].innerHTML;
+			document.getElementById("b2").value	=	table.rows[7].cells[1].innerHTML;
+			document.getElementById("c2").value	=	table.rows[8].cells[1].innerHTML;
+			document.getElementById("d2").value	=	table.rows[9].cells[1].innerHTML;
+			document.getElementById("a3").value	=	table.rows[11].cells[1].innerHTML;
+			document.getElementById("b3").value	=	table.rows[12].cells[1].innerHTML;
+			document.getElementById("c3").value	=	table.rows[13].cells[1].innerHTML;
+			document.getElementById("d3").value	=	table.rows[14].cells[1].innerHTML;
+			document.getElementById("a4").value	=	table.rows[16].cells[1].innerHTML;
+			document.getElementById("b4").value	=	table.rows[17].cells[1].innerHTML;
+			document.getElementById("c4").value	=	table.rows[18].cells[1].innerHTML;
+			document.getElementById("d4").value	=	table.rows[19].cells[1].innerHTML;
+			document.getElementById("a5").value	=	table.rows[21].cells[1].innerHTML;
+			document.getElementById("b5").value	=	table.rows[22].cells[1].innerHTML;
+			document.getElementById("c5").value	=	table.rows[23].cells[1].innerHTML;
+			document.getElementById("d5").value	=	table.rows[24].cells[1].innerHTML;
+		// };
+// 	}
+// }
+</script> -->

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+<% include ../partials/theader %>
+<!-- Main Stylesheet File -->
+  <!-- <link href="/css/style.css" rel="stylesheet"> -->
+  <link href="/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <title>SecureUP</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+<!-- 	<div class="container">
+		<header class = "jumbotron"
+			<br><h1 align="right">SecureUp</h1>
+	<% details.forEach(function(detail){ %>
+	<h3>Hello, <%= detail.tfname %> <%= detail.tlname %>!</h3>
+	<h5>How are you doing?</h5>
+	<% }) %>
+		</header>
+	</div> -->
+<style type="text/css">
+	.f{
+    height: 514px;
+}
+  .imgbox {
+   display: grid;
+   height: 100%;
+  }
+.img {
+   max-width: 7.5%;
+   max-height: 7.5%;
+   margin: auto;
+}
+.secureup{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 75px;
+        
+    }
+        .secureup1{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 25px;
+        
+    }
+            .secureup2{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        
+    }
+    .secureup3{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 15px;
+        color: white;
+        
+    }
+    .teachers{
+      height: 200px;
+    }
+    /* Portfolio Section
+--------------------------------*/
+#portfolio {
+  padding: 60px 0;
+}
+
+#portfolio #portfolio-flters {
+  padding: 0;
+  margin: 5px 0 35px 0;
+  list-style: none;
+  text-align: center;
+}
+
+#portfolio #portfolio-flters li {
+  cursor: pointer;
+  margin: 15px 15px 15px 0;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #666666;
+  border-radius: 4px;
+  text-transform: uppercase;
+  background: #fff;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+#portfolio #portfolio-flters li:hover, #portfolio #portfolio-flters li.filter-active {
+  background: #18d26e;
+  color: #fff;
+}
+
+#portfolio #portfolio-flters li:last-child {
+  margin-right: 0;
+}
+
+#portfolio .portfolio-wrap {
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+#portfolio .portfolio-wrap:hover {
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.16);
+}
+
+#portfolio .portfolio-item {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+#portfolio .portfolio-item figure {
+  background: #000;
+  overflow: hidden;
+  height: 300px;
+  position: relative;
+  border-radius: 4px 4px 0 0;
+  margin: 0;
+  image-rendering: auto;
+      margin-left: auto;
+    margin-right: auto;
+}
+
+#portfolio .portfolio-item figure:hover img {
+  opacity: 0.4;
+  transition: 0.3s;
+}
+
+#portfolio .portfolio-item figure .link-preview, #portfolio .portfolio-item figure .link-details {
+  position: absolute;
+  display: inline-block;
+  opacity: 0;
+  line-height: 1;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.2s linear;
+
+}
+
+#portfolio .portfolio-item figure .link-preview i, #portfolio .portfolio-item figure .link-details i {
+  padding-top: 6px;
+  font-size: 22px;
+  color: #333;
+}
+
+#portfolio .portfolio-item figure .link-preview:hover, #portfolio .portfolio-item figure .link-details:hover {
+  background: #18d26e;
+}
+
+#portfolio .portfolio-item figure .link-preview:hover i, #portfolio .portfolio-item figure .link-details:hover i {
+  color: #fff;
+}
+
+#portfolio .portfolio-item figure .link-preview {
+  left: calc(50% - 38px);
+  top: calc(50% - 18px);
+}
+
+#portfolio .portfolio-item figure .link-details {
+  right: calc(50% - 38px);
+  top: calc(50% - 18px);
+}
+
+#portfolio .portfolio-item figure:hover .link-preview {
+  opacity: 1;
+  left: calc(50% - 44px);
+}
+
+#portfolio .portfolio-item figure:hover .link-details {
+  opacity: 1;
+  right: calc(50% - 44px);
+}
+
+#portfolio .portfolio-item .portfolio-info {
+  background: #fff;
+  text-align: center;
+  padding: 30px;
+  height: 150px;
+  border-radius: 0 0 3px 3px;
+}
+
+#portfolio .portfolio-item .portfolio-info h4 {
+  font-size: 12px;
+  line-height: 1px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  padding-bottom: 0;
+}
+
+#portfolio .portfolio-item .portfolio-info h4 a {
+  color: #333;
+}
+
+#portfolio .portfolio-item .portfolio-info h4 a:hover {
+  color: #18d26e;
+}
+
+#portfolio .portfolio-item .portfolio-info p {
+  padding: 0;
+  margin: 0;
+  color: #b8b8b8;
+  font-weight: 500;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+</style>
+
+	<!--corousal -->
+	<div class="container">
+		<div class="thumbnail">
+	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+	  <ol class="carousel-indicators">
+	    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+	    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+	    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+	  </ol>
+	  <div class="carousel-inner">
+	    <div class="carousel-item active f sec">
+	     <!-- <img class="d-block w-100" src="https://ak1.picdn.net/shutterstock/videos/16054381/thumb/1.jpg?i10c=img.resize(height:160)" alt="First slide"> -->
+                <div align="center">
+                <p class="secureup1">
+                    <br>
+                    <br>
+                WELCOME TO
+                <br>
+                </p> 
+                <p class="secureup">
+                    <div class="imgbox">
+                <img class = "img" src="/images/security.png" alt="no image"></div><br><p class="secureup">TEACHER LOBBY
+                </p>
+                </div>
+	        <div class="carousel-caption d-none d-md-block t">
+    <p><a href="#lobby" class="btn btn-lg btn-light">GET STARTED</a></p>
+  </div>
+	    </div>
+	    <div class="carousel-item f ">
+	       <div align="center">
+                <p class="secureup1">
+                    <br>
+                    <br>
+                Ready for the New Begining!?
+                Exited?
+                </p>
+                <p class="secureup">Welcome to the First Paper Less Examination Portal</p>  
+                <br>
+                <p class="secureup1">
+                	Click Below To
+                </p>
+                </div>
+	      	        <div class="carousel-caption d-none d-md-block t">
+    <p><a href="#" class="btn btn-lg btn-light">Quick Tour</a></p>
+  </div>
+	    </div>
+	    <div class="carousel-item f">
+	    	<br>
+	    	<br>
+	    	<br>
+	    	<br>
+	      <p class="secureup" align="center">Examinations are in the corner</p>
+	      <br>
+	      <br>
+	      <br>
+	      <p class="secureup1" align="center">Time to</p> 
+	      	        <div class="carousel-caption d-none d-md-block">
+                    <p><a href="#" data-target="#setpaper" data-toggle="modal" class="btn btn-lg btn-light">Set Question Paper</a></p>
+  </div>
+	    </div>
+	  </div>
+	  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+	    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	    <span class="sr-only">Previous</span>
+	  </a>
+	  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+	    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+	    <span class="sr-only">Next</span>
+	  </a>
+	</div>
+</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div class="modal" id="setpaper" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <button class="float-right close" data-dismiss="modal">&times;</button>
+      <div class="form-group">
+        <form class="col-md-6 offset-md-3" action="#">
+          <legend align="center">Instructions</legend>
+            <p>1. All modules are <strong class="instructions">compulsory</strong>.</p>
+            <p>2. The <strong class="instructions">"a"</strong> question in each module is compulsory.</p>
+            <p>3. Total marks per module <strong class="instructions">should be 20</strong>.</p>
+            <p>4. If a question is not set for a particular Qno, marks <strong class="instructions">should not be altered</strong>.</p>
+            <p>5. Cross <strong class="instructions">verify entire paper</strong> before submitting it.</p>
+            <div align="center">
+            <a align="center" class="btn btn-primary" href ="/teachers/questionpaper" type="submit" autofocus="autofocus">Set Paper</a></div>
+           </form> 
+        </div>
+          </div>
+      </div>
+    </div>
+<!-- Quick Tour -->
+<!-- <section id="lobby">
+<div class="container bg-light">
+	<legend align="center">Teacher Lobby</legend>
+	<br>
+	<br>
+</div>
+</section> -->
+  
+    <section id="portfolio"  class="section-bg" >
+      <div class="container">
+
+        <header class="section-header">
+          <legend class="section-title" align="center">Great Teachers</legend>
+        </header>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <ul id="portfolio-flters">
+              <li data-filter=".filter-app">Science</li>
+              <li data-filter=".filter-card">Technology</li>
+              <li data-filter=".filter-web">Research</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="https://pbs.twimg.com/profile_images/879355674957926400/VSGZHGib_400x400.jpg" class="img-fluid" alt="">
+                <a href="https://pbs.twimg.com/profile_images/879355674957926400/VSGZHGib_400x400.jpg" data-lightbox="portfolio" data-title="Albert_Einstein" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
+                <a href="https://en.wikipedia.org/wiki/Albert_Einstein" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+              </figure>
+
+              <div class="portfolio-info">
+                <h4><a href="https://en.wikipedia.org/wiki/Albert_Einstein">Albert Einstein</a></h4>
+                <p>Physics, Philosophy</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Apj_abdul_kalam.JPG/345px-Apj_abdul_kalam.JPG" class="img-fluid" alt="">
+                <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Apj_abdul_kalam.JPG/345px-Apj_abdul_kalam.JPG" class="link-preview" data-lightbox="portfolio" data-title="A. P. J. Abdul Kalam" title="Preview"><i class="ion ion-eye"></i></a>
+                <a href="https://en.wikipedia.org/wiki/A._P._J._Abdul_Kalam" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+              </figure>
+
+              <div class="portfolio-info">
+                <h4><a href="https://en.wikipedia.org/wiki/A._P._J._Abdul_Kalam">A. P. J. Abdul Kalam</a></h4>
+                <p>Professor, Author, Aerospace scientist</p>
+              </div>
+            </div>
+          </div>
+<br>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Bill_Gates_June_2015.jpg/330px-Bill_Gates_June_2015.jpg" class="img-fluid" alt="">
+                <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Bill_Gates_June_2015.jpg/330px-Bill_Gates_June_2015.jpg" class="link-preview" data-lightbox="portfolio" data-title="Bill Gates" title="Preview"><i class="ion ion-eye"></i></a>
+                <a href="https://en.wikipedia.org/wiki/Bill_Gates" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+              </figure>
+
+              <div class="portfolio-info">
+                <h4><a href="https://en.wikipedia.org/wiki/Bill_Gates">Bill Gates</a></h4>
+                <p>Microsoft</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="https://i.guim.co.uk/img/media/d2b96bb9fc4650aec4b3625a64a014671a7ee576/0_0_1710_1026/master/1710.jpg?w=460&q=55&auto=format&usm=12&fit=max&s=8e1742efe443158e3302412e3256152a" class="img-fluid" alt="">
+                <a href="https://upload.wikimedia.org/wikipedia/commons/e/eb/Stephen_Hawking.StarChild.jpg" class="link-preview" data-lightbox="portfolio" data-title="Stephen Hawking" title="Preview"><i class="ion ion-eye"></i></a>
+                <a href="https://en.wikipedia.org/wiki/Stephen_Hawking" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+              </figure>
+
+              <div class="portfolio-info">
+                <h4><a href="https://en.wikipedia.org/wiki/Stephen_Hawking">Stephen Hawking</a></h4>
+                <p>General relativity, Quantum gravity</p>
+              </div>
+            </div>
+          </div>
+
+  <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Swami_Vivekananda-1893-09-signed.jpg/330px-Swami_Vivekananda-1893-09-signed.jpg" class="img-fluid" alt="">
+                <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Swami_Vivekananda-1893-09-signed.jpg/330px-Swami_Vivekananda-1893-09-signed.jpg" class="link-preview" data-lightbox="portfolio" data-title="Swami Vivekananda" title="Preview"><i class="ion ion-eye"></i></a>
+                <a href="https://en.wikipedia.org/wiki/Swami_Vivekananda" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+              </figure>
+
+              <div class="portfolio-info">
+                <h4><a href="https://en.wikipedia.org/wiki/Swami_Vivekananda">Swami Vivekananda</a></h4>
+                <p>Raja Yoga, Karma Yoga, Bhakti </p>
+              </div>
+            </div>
+          </div>
+
+         <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Photograph_of_Sarvepalli_Radhakrishnan_presented_to_First_Lady_Jacqueline_Kennedy_in_1962.jpg/330px-Photograph_of_Sarvepalli_Radhakrishnan_presented_to_First_Lady_Jacqueline_Kennedy_in_1962.jpg" class="img-fluid" alt="">
+                <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Photograph_of_Sarvepalli_Radhakrishnan_presented_to_First_Lady_Jacqueline_Kennedy_in_1962.jpg/330px-Photograph_of_Sarvepalli_Radhakrishnan_presented_to_First_Lady_Jacqueline_Kennedy_in_1962.jpg" class="link-preview" data-lightbox="portfolio" data-title="Sarvepalli Radhakrishnan" title="Preview"><i class="ion ion-eye"></i></a>
+                <a href="https://en.wikipedia.org/wiki/Sarvepalli_Radhakrishnan" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+              </figure>
+
+              <div class="portfolio-info">
+                <h4><a href="https://en.wikipedia.org/wiki/Sarvepalli_Radhakrishnan">Sarvepalli Radhakrishnan</a></h4>
+                <p> Philosopher, Professor</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4" align="left">
+            <span class="copyright">Copyright &copy; SecureUp.Team 2018</span>
+          </div>
+          <div class="col-md-4" align="center">
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-facebook"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4" align="right">
+            <ul class="list-inline quicklinks">
+              <li class="list-inline-item">
+                <a href="#">Privacy Policy</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">Terms of Use</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <br>
+    <br>
+      <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <script src="lib/touchSwipe/jquery.touchSwipe.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+
+<!-- <% include ../partials/tfooter %> -->

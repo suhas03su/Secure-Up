@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<% include partials/header %>
+	<div class="container">
+			<form class="col-md-6 offset-md-3" action="/teachers/OTP" method="POST">
+				<legend align="center">Teacher Authentication</legend>
+				<div class="form-row">
+				<div class="form-group col-md-6">
+				<label for="username">TID</label>
+				<input class="form-control" type="text" name="username" aria-describedby="tidHelp" placeholder="EX:TID007" required="" autofocus>
+				<small id="tidHelp" class="form-text text-muted">Please check your mail for UID</small>
+				</div>
+				<div class="form-group col-md-6">
+				<label for="num">OTP</label>
+				<input class="form-control" type="password" name="num" aria-describedby="otpHelp" placeholder="One Time Password" required="" autofocus>
+				<small id="otpHelp" class="form-text text-muted">Please check your mail for OTP</small>
+				</div>
+				</div>
+				<div class="form-group">
+				<label for="password">Password</label>
+				<input class="form-control" type="password" name="password" aria-describedby="passHelp" required="" autofocus>
+				<small id="passHelp" class="form-text text-muted">Password given while registering!</small>
+				</div>
+				<div class="form-group">
+				<input class="btn btn-primary" type="submit" value="Login">
+				<a class="float-right" href="/teachers/forgot">Forgot password?</a>
+				</div> 
+				</form>
+	</div>
+<% include partials/footer %>
+<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>

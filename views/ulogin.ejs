@@ -1,0 +1,16 @@
+<% include partials/header %>
+
+	<div class="container">
+	<legend align="center"><i class="fas fa-users"></i></a> User Login</legend>
+			<form class="col-md-6 offset-md-3" action="/users/login" method="POST">
+				<div class="form-group">
+				<label for="emailid">Email</label>
+				<input class="form-control" type="email" name="emailid" placeholder="someone@example.com" required="" autofocus>
+				</div>
+				<div class="form-group">
+				<input class="btn btn-primary" type="submit" value="Login" autofocus>
+				<small><a class="float-right" href="/users/register">New User? Create new Account in a Jiffy!</a></small>
+				</div>
+			</form>
+	</div>
+<% include partials/footer %>

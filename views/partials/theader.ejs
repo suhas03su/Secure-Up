@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- required meta tags -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Bootstrap CSS v4.0.0 -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<!-- Previous version of bootstrap -->
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<!-- font awesome -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
+		<link href="/fontawesome/fontawesome-all.css" rel="stylesheet">
+		<!-- google fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		  <link href="images/security.png" rel="icon">
+  <link href="images/security.png" rel="apple-touch-icon">
+
+		<title>SecureUp</title>
+	</head>
+	<body bgcolor="grey">
+<style>
+		body,head,html {
+          font-family: 'Montserrat', sans-serif;
+    						}
+    	.instructions{
+    		color: red;
+    	}
+	</style>
+	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+	<div class="container">
+		<div class="navbar-header">
+			<a href="/teachers/home" class="navbar-brand">Home <i class="fas fa-home"></i> </a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-nav-demo" aria-controls="bs-nav-demo" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+		</div>
+		<div class="collapse navbar-collapse" id="bs-nav-demo">
+			<ul class="navbar-nav ml-auto">
+			</ul>
+			<ul class="navbar-nav navbar-right ml-auto">
+				<li class="nav-item"><a class="nav-link"  href="#" data-target="#setpaper" data-toggle="modal"> <i class="fas fa-file-alt"></i> Set Question Paper</a></li>
+				<li class="nav-item"><a class="nav-link"  href="/logout">SignOut <i class="fas fa-sign-out-alt"></i></a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<div class="modal" id="setpaper" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+				<button class="float-right close" data-dismiss="modal">&times;</button>
+			<div class="form-group">
+				<form class="col-md-6 offset-md-3" action="#">
+					<legend align="center">Instructions</legend>
+						<p>1. All modules are <strong class="instructions">compulsory</strong>.</p>
+						<p>2. The <strong class="instructions">"a"</strong> question in each module is compulsory.</p>
+						<p>3. Total marks per module <strong class="instructions">should be 20</strong>.</p>
+						<p>4. If a question is not set for a particular Qno, marks <strong class="instructions">should not be altered</strong>.</p>
+						<p>5. Cross <strong class="instructions">verify entire paper</strong> before submitting it.</p>
+						<div align="center">
+						<a align="center" class="btn btn-primary" href ="/teachers/questionpaper" type="submit" autofocus="autofocus">Set Paper</a></div>
+					 </form> 
+				</div>
+					</div>
+			</div>
+		</div>
+
+<!-- handling flash messages -->
+		<div class="container">
+		    <% if(error && error.length > 0) { %>
+		    	<div class="alert alert-danger alert-dismissible text-center" role="alert">
+		    		<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+		    		<p><%= error %></p>
+		    	</div>
+		    <% } %>
+		    <% if(success && success.length > 0) { %>
+		    	<div class="alert alert-success alert-dismissible text-center" role="alert">
+		    		<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+		    		<p><%= success %></p>
+		    	</div>
+		    <% } %>
+	 	</div>

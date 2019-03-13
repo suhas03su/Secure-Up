@@ -1,0 +1,28 @@
+<% include partials/header %>
+	<div class="container">
+			<form class="col-md-6 offset-md-3" action="/users/OTP" method="POST">
+			<legend align="center">User Authentication</legend>
+				<div class="form-row">
+				<div class="form-group col-md-6">
+				<label for="username">UID</label>
+				<input class="form-control" type="text" aria-describedby="uidHelp" name="username" placeholder="EX:UID007" required="" autofocus>
+				<small id="uidHelp" class="form-text text-muted">Please check your mail for UID</small>
+				</div>
+				<div class="form-group col-md-6">
+				<label for="num">OTP</label>
+				<input class="form-control" type="password" name="num" aria-describedby="otpHelp" placeholder="One Time Password" required="" autofocus>
+				<small id="otpHelp" class="form-text text-muted">Please check your mail for OTP</small>
+				</div>
+				</div>
+				<div class="form-group">
+				<label for="password">Password</label>
+				<input class="form-control" aria-describedby="passHelp" type="password" name="password" required="" autofocus>
+				<small id="passHelp" class="form-text text-muted">Password given while registering!</small>
+				</div>
+				<div class="form-group">
+				<input class="btn btn-primary" type="submit" value="Login">
+				<a class="float-right" href="/users/forgot">Forgot password?</a>
+				</div>
+			</form>
+	</div>
+<% include partials/footer %>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- required meta tags -->
+		<meta charset="utf-8">
+		<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1"> -->
+		<!-- Bootstrap CSS v4.0.0 -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<!-- Previous version of bootstrap -->
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<!-- font awesome -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
+		<!-- google fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<!--local fontawesome-->
+		<!-- <link href="/fontawesome/fontawesome-all.css" rel="stylesheet"> -->
+		  <link href="images/security.png" rel="icon">
+  <link href="images/security.png" rel="apple-touch-icon">
+
+
+		<title>SecureUp</title>
+		  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="images/security.png" rel="icon">
+  <link href="images/security.png" rel="apple-touch-icon">
+
+  <style>
+	body,head,html {
+          font-family: 'Montserrat', sans-serif;
+	}
+	.Con{
+    background-image: url("https://eoimages.gsfc.nasa.gov/images/imagerecords/55000/55167/earth_lights.gif");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+}
+</style>
+
+				
+	</head>
+	<body bgcolor="grey">
+		<!-- Navigation Bar -->
+			<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+			<div class="container">
+				<div class="navbar-header">
+					<a href="/homes" class="navbar-brand">Home <i class="fas fa-home"></i></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-nav-demo" aria-controls="bs-nav-demo" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-nav-demo">
+<!-- 										<ul class="navbar-nav ml-auto">
+						<li class="nav-item"><a href="#" class="nav-link">About</a></li>
+						<li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+					</ul> -->
+						<ul class="navbar-nav navbar-right ml-auto">
+<!-- 							<li class="nav-item"><a href="#" class="nav-link">About</a></li>
+							<li class="nav-item"><a href="#cnt" class="nav-link">Contact <i class="fas fa-phone-square"></i></a></li> -->
+<!-- 						<li class="nav-item"><a class="nav-link" href="http://localhost:3000/users/register">User Signup</a></li>
+						<li class="nav-item"><a class="nav-link" href="http://localhost:3000/teachers/register">Teacher Signup</a></li>
+						<li class="nav-item"><a class="nav-link" href="http://localhost:3000/users/login">User Login</a></li>
+						<li class="nav-item"><a class="nav-link" href="http://localhost:3000/teachers/login">Teacher Login</a></li> -->
+						<li class="nav-item"><a class="nav-link" href="/admins/login">Admin <i class="fas fa-user-secret"></i></a></li>
+						</ul>
+				</div>
+			</div>
+		</nav>
+
+
+<!-- handling flash messages -->
+		<div class="container">
+		    <% if(error && error.length > 0) { %>
+		    	<div class="alert alert-danger alert-dismissible text-center" role="alert">
+		    		<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+		    		<p><%= error %></p>
+		    	</div>
+		    <% } %>
+		    <% if(success && success.length > 0) { %>
+		    	<div class="alert alert-success alert-dismissible text-center" role="alert">
+		    		<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+		    		<p><%= success %></p>
+		    	</div>
+		    <% } %>
+	 	</div>
